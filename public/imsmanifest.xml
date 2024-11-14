@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="D2L_13946" xmlns:d2l_2p0="http://desire2learn.com/xsd/d2lcp_v2p0" xmlns:scorm_1p2="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns="http://www.imsglobal.org/xsd/imscp_v1p1">
+    <organizations default="d2l_orgs">
+        <organization identifier="d2l_org">
+            <item identifier="165257" identifierref="RES_CONTENT_165257" d2l_2p0:id="1" isvisible="False" description="&lt;p&gt;This tool allows you to create a CSV file for import into the Brightspace&amp;nbsp;&lt;a rel=&quot;noopener&quot; href=&quot;https://documentation.brightspace.com/EN/le/question_library/instructor/import_questions_into_question_library.htm&quot; target=&quot;_blank&quot; title=&quot;opens in new window&quot;&gt;Question Library&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;span style=&quot;font-size: 12pt;&quot;&gt;Algonquin College have also created a similar tool:&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 12pt;&quot;&gt;&lt;a rel=&quot;noopener&quot; href=&quot;https://plato.algonquincollege.com/BrightspaceQuizGenerator/&quot; target=&quot;_blank&quot;&gt;Algonquin College Brightspace Test Question Generator&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;span style=&quot;font-size: 12pt;&quot;&gt;This was built based on the original version created by University of Wisconsin.&lt;/span&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;span style=&quot;font-size: 12pt;&quot;&gt;&lt;strong&gt;Feedback and Support&lt;br /&gt;&lt;/strong&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 12pt;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 12pt;&quot;&gt;Although we hope to make additional improvements to the Quiz Question Converter in the future, at this point D2L is not committed to supporting or maintaining it. Nevertheless, we welcome your feedback and encourage you to share tips, tricks, extensions, etc., with your fellow Community members!&lt;/span&gt;&lt;/p&gt;" completion_type="2">
+                <title>Quiz Question Converter</title>
+                <item identifier="165258" identifierref="RES_CONTENT_165258" d2l_2p0:id="2" d2l_2p0:resource_code="65C5EB64-1731-48D2-B886-C2A01750A9A9-6040" description="" completion_type="3">
+                    <title>Quiz Question Converter</title>
+                </item>
+            </item>
+        </organization>
+    </organizations>
+    <resources>
+        <resource identifier="RES_CONTENT_165257" type="webcontent" d2l_2p0:material_type="contentmodule" d2l_2p0:link_target="" href="" title="" />
+        <resource identifier="RES_CONTENT_165258" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="" href="question_converter\_toolkit\quiz_question_converter\question_converter.html" title="" />
+        <resource identifier="res_syllabus" type="webcontent" d2l_2p0:material_type="d2lsyllabus" d2l_2p0:link_target="" href="syllabus_d2l.xml" title="" />
+    </resources>
+</manifest>

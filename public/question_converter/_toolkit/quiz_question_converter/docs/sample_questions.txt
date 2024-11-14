@@ -1,0 +1,37 @@
+1. Which of the following is a planet? (Multiple Choice)
+1. Sun
+*2. Earth
+3. Proxima Centauri
+?Hint: a celestial body moving in an elliptical orbit around a star.
+@Feedback: Good job!
+
+2. Which of the following is a planet? (Multiple Selection)
+a) Sun
+*b) Earth
+*c) Mars
+d) Proxima Centauri
+?Hint: a celestial body moving in an elliptical orbit around a star.
+@Feedback: Good job!
+
+3. Water consists of hydrogen and oxygen.(True/False) 
+True
+
+4. Water consists of fire and ice.(True/False) 
+False
+
+5. Tell me about yourself. (Long Answer)
+
+SA 6. What's your favorite food?(Short Answer)
+
+order 7. Order the following planets according to distance from the sun, shortest to longest.
+Mercury
+Earth
+Mars
+Jupiter
+Neptune
+
+match 8. Match the number with its spelling.
+1) This is choice 1 text / This matches with choice 1
+2. This is choice 2 text long text / This matches with choice 2
+3) This is choice 3 text / This matches with choice 3
+/ decoy      
