@@ -17,86 +17,61 @@
             <div class="row justify-content-center">
                 <div class="col-xs-12 col-sm-10 col-md-8">
                     <div class="row">
-                        <h1 class="center">BrightSpace Quiz Question Converter</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            This tool allows you to create a CSV file for import into the Brightspace.
+                        <div class="col-sm-8">
+                            <h1>BrightSpace Quiz Question Converter</h1>
+                            <p>This tool allows you to create a CSV file for import into the Brightspace. This tool was originally published on<a target="_blank" href="https://community.d2l.com/brightspace/kb/articles/4161-quiz-question-converter"> D2L BrightSpace Community</a> by <a href="https://community.d2l.com/brightspace/profile/discussions/14245/Alex.V.58" target="_blank">Alex.V.58</a>. The website owner made design changes and hosted it online for easier and wider access. All credits of the tool goes to the original publishers.</p>
                         </div>
-                        <div class="col-sm-6 small ">
+                        <div class="col-sm-4 small mt-3">
                             <ul>
-                                
                                 <li>
-                                    <a href="#" data-toggle="modal" data-target="#info">Publisher Information & Credits</a>.
+                                    <a href="#" data-toggle="modal" data-target="#exampleModal">View Question Formatting Instructions</a>.
                                 </li>
                                 <li>
-                                    <a href="#" data-toggle="modal" data-target="#exampleModal">Question Formatting Instructions</a>.
+                                    <a href="./question_converter/_toolkit/quiz_question_converter/docs/sample_questions.txt" download>Download Sample Question Text File</a>
                                 </li>
                             </ul>
                             <p></p>
                         </div>
                     </div>
-                    <hr>
                     <form>
                         <div class="form-group">
-                            <label for="textInput" class="lead">Paste the text for your quiz in the box.</label><!-- All Questions --><textarea class="form-control" id="textInput" rows="10"></textarea>
+                            <label for="textInput" class="lead">Paste the text for your quiz in the box.</label><!-- All Questions --><textarea class="form-control" id="textInput" rows="20"></textarea>
                         </div>
-                        
-                        <button type="button" class="btn btn-secondary" id="btnConvert"><strong>Convert</strong></button>&nbsp;&nbsp;
-                        <button type="button" class="btn btn-clear" id="btnClear">Clear Text</button>
-                        <div class="clearfix mt-2"></div>
-                        <div class="alert alert-success d-none" role="alert" id="sent_success">
-                            <p>Success! Your questions are converted to CSV file "quiz.csv".</p>
-                        </div>
-                        <div class="alert alert-danger d-none" role="alert" id="sent_error">An error occurred.</div>
-                        <div class="form-group d-none">
-                            <label for="jsonResult">Result</label><textarea class="form-control" id="jsonResult" rows="20" onclick="this.focus();this.select()"></textarea>
-                        </div><hr>
-                        
-                        
-                        <div class="row ">
-                            <div class="col-2"><br>OPTIONS:                            
-                            </div>
-                            <div class="col-3">
+                        <hr>
+                        <p>
+                            <strong>Options</strong>
+                        </p>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-4">
                                 <div class="form-group">
-                                    <label for="defaultPoint" class="label-inline">Default point value:</label><input type="number" min="1" class="form-control" id="defaultPoint" placeholder="1">
+                                    <label for="defaultPoint" class="label-inline">Default point value for each question:</label><input type="text" class="form-control" id="defaultPoint" placeholder="1">
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="col-xs-12 col-sm-6 col-md-4">
                                 <div class="form-group">
-                                    <label for="defaultDifficulty" class="label-inline">Default difficulty value:</label><input type="number" min="1" class="form-control" id="defaultDifficulty" placeholder="1">
+                                    <label for="defaultDifficulty" class="label-inline">Default difficulty value for each
+                           question:</label><input type="text" class="form-control" id="defaultDifficulty" placeholder="1">
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="col-xs-12 col-sm-6 col-md-4">
                                 <div class="checkbox">
-                                    <label><input type="checkbox" name="removeEnum" id="removeEnum" value="remove" checked>&nbsp;&nbsp;Remove enumeration
+                                    <label><input type="checkbox" name="removeEnum" id="removeEnum" value="remove">Remove enumeration
                            from answers</label>
                                 </div>
                             </div>
                         </div>
-                        
-                    </form>
-
-                    <!-- Information Modal -->
-                    <div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="infoLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-scrollable modal-xl" role="document">
-                            <div class="modal-content" role="dialog">
-                                <div class="modal-header">
-                                    <h2 class="modal-title" id="exampleModalLabel">Important Information</h2>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Published and maintained by <a href="https://sanoop.sadique.ca" target="_blank">Sanoop S.</a>—glad to share this tool with you! Feel free to explore or fork it on GitHub at <a href="https://github.com/sanoopsadique/D2L-QGen" target="_blank">D2L-QGen</a>. Special thanks to <a href="https://render.com/" target="_blank">Render</a> for their awesome free hosting plan!</p>
-                                    <p>
-                                        A huge thanks to <a target="_blank" href="https://community.d2l.com/brightspace/kb/articles/4161-quiz-question-converter">D2L BrightSpace Community</a> and <a href="https://community.d2l.com/brightspace/profile/discussions/14245/Alex.V.58" target="_blank">Alex.V.58</a> for creating this tool. We’ve made some design updates and hosted it here to make it easier to use and access. All programming credit goes to the original developers. We're just here to help share their great work with you!
-                                    </p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
+                        <hr>
+                        <button type="button" class="btn btn-secondary" id="btnConvert">Convert</button><button type="button" class="btn btn-primary" id="btnClear">Clear Text</button>
+<div class="clearfix mt-2"></div>
+                        <div class="alert alert-success d-none" role="alert" id="sent_success">
+                            <p>Success! Your questions are converted to CSV file "quiz.csv".</p>
                         </div>
-                    </div>
+                        <div class="alert alert-danger d-none" role="alert" id="sent_error">An error occurred, please contact
+                  your admin.</div>
+                        <div class="form-group d-none">
+                            <label for="jsonResult">Result</label><textarea class="form-control" id="jsonResult" rows="20" onclick="this.focus();this.select()"></textarea>
+                        </div>
+                    </form>
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-scrollable modal-xl" role="document">

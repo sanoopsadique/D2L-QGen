@@ -23,6 +23,7 @@ body {
   html,
   body {
     font-size: 1.125rem;
+    
   }
 }
 
@@ -1009,6 +1010,36 @@ button.btn-secondary:disabled, button.btn-secondary[aria-expanded="true"] {
 button.btn-secondary:disabled:hover, button.btn-secondary[aria-expanded="true"]:hover {
   background-color: rgba(70, 166, 97, 0.75);
   border-color: rgba(70, 166, 97, 0.75);
+  color: #000000;
+}
+
+button.btn-clear {
+  background-color: #b95216;
+  border-color: #b95216;
+  color: #000000;
+}
+
+button.btn-clear:hover, button.btn-clear:focus {
+  background-color: #b95216;
+  border-color: #b95216;
+  color: #000000;
+}
+
+button.btn-clear:active, button.btn-clear:active:hover, button.btn-clear:active:focus {
+  background-color: #b95216;
+  border-color: #b95216;
+  color: #000000;
+}
+
+button.btn-clear:disabled, button.btn-clear[aria-expanded="true"] {
+  background-color: #b95216;
+  border-color: #b95216;
+  color: #000000;
+}
+
+button.btn-clear:disabled:hover, button.btn-clear[aria-expanded="true"]:hover {
+  background-color: #b95216;
+  border-color: #b95216;
   color: #000000;
 }
 

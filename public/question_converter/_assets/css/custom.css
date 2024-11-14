@@ -1,1 +1,10 @@
 /*========= Empty CSS file for client to add custom CSS ==========*/
+.verticaltext{
+    width:1px;
+    word-wrap: break-word;
+    white-space:pre-wrap; 
+ }
+ .vl {
+    border-right: 2px solid rgb(118, 118, 119);
+    height: 100%;
+ }
