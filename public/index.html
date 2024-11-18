@@ -29,13 +29,13 @@
                         </div>
                         <div class="col-sm-6 small ">
                             <ul>
+                                <li>
+                                    Published and maintained by <a href="https://sanoop.sadique.ca" target="_blank">Sanoop S.</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="modal" data-target="#info">Detailed Credits</a>.
+                                </li>
                                 
-                                <li>
-                                    <a href="#" data-toggle="modal" data-target="#info">Publisher Information & Credits</a>.
-                                </li>
-                                <li>
-                                    <a href="#" data-toggle="modal" data-target="#exampleModal">Question Formatting Instructions</a>.
-                                </li>
                             </ul>
                             <p></p>
                         </div>
@@ -43,7 +43,7 @@
                     <hr>
                     <form>
                         <div class="form-group">
-                            <label for="textInput" class="lead">Paste the text for your quiz in the box.</label><!-- All Questions --><textarea class="form-control" id="textInput" rows="10"></textarea>
+                            <label for="textInput" class="lead">Paste the text for your quiz in the box <a href="#" data-toggle="modal" data-target="#exampleModal">(Formatting Instructions)</a>.</label><!-- All Questions --><textarea class="form-control" id="textInput" rows="10"></textarea>
                         </div>
                         
                         <button type="button" class="btn btn-secondary" id="btnConvert"><strong>Convert</strong></button>&nbsp;&nbsp;
@@ -86,7 +86,7 @@
                         <div class="modal-dialog modal-dialog-scrollable modal-xl" role="document">
                             <div class="modal-content" role="dialog">
                                 <div class="modal-header">
-                                    <h2 class="modal-title" id="exampleModalLabel">Important Information</h2>
+                                    <h2 class="modal-title" id="exampleModalLabel">Credits and Important Information</h2>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                                 </div>
                                 <div class="modal-body">
@@ -110,36 +110,254 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                                 </div>
                                 <div class="modal-body">
-                                    <h3>Supported Question Types</h3>
-                                    <p>
-                                        The Quiz Question Converter currently supports the following question types.<span class="instruction">Select each one for more information.</span>
-                                    </p>
-                                    <div class="accordion" id="accordion">
-                                        <div class="card">
-                                            <div class="card-header" id="heading_acc_">
-                                                <h4 class="mb-0 card-title">
-                                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_acc_" aria-expanded="false" aria-controls="collapse_acc_">True or False (T/F)</button>
-                                                </h4>
-                                            </div>
-                                            <div id="collapse_acc_" class="collapse" aria-labelledby="heading_acc_">
-                                                <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col-sm">
-                                                            <ul>
-                                                                <li>Enter your question on a single line.</li>
-                                                                <li>Enter the answer on the next line using either: True or False</li>
-                                                                <li>Do not use an identifier or enumerator in the answer line.</li>
-                                                            </ul>
+                                    <div class="accoridan" id="accordion1">
+                                        
+                                        <p>
+                                            The Quiz Question Converter currently supports the following question types.
+                                        </p>
+                                        <div class="accordion" id="accordion">
+                                            <div class="card">
+                                                <div class="card-header" id="heading_acc_">
+                                                    <h4 class="mb-0 card-title">
+                                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_acc_" aria-expanded="false" aria-controls="collapse_acc_">True or False (T/F)</button>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapse_acc_" class="collapse" aria-labelledby="heading_acc_" data-parent="#accordion1">
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="col-sm">
+                                                                <ul>
+                                                                    <li>Enter your question on a single line.</li>
+                                                                    <li>Enter the answer on the next line using either: True or False</li>
+                                                                    <li>Do not use an identifier or enumerator in the answer line.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-sm">
+                                                                <div class="card bg-light">
+                                                                    <div class="card-body">
+                                                                        <h5>
+                                                                            <small>True or False Example</small>
+                                                                        </h5>
+                                                                        <p>
+                                                                            Water consists of hydrogen and oxygen.<br>True
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div class="col-sm">
-                                                            <div class="card bg-light">
-                                                                <div class="card-body">
-                                                                    <h5>
-                                                                        <small>True or False Example</small>
-                                                                    </h5>
-                                                                    <p>
-                                                                        3. Water consists of hydrogen and oxygen.<br>True
-                                                                    </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="heading_acc_">
+                                                    <h4 class="mb-0 card-title">
+                                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_acc_" aria-expanded="false" aria-controls="collapse_acc_">Multiple Choice (MC)</button>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapse_acc_" class="collapse" aria-labelledby="heading_acc_" data-parent="#accordion1">
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="col-sm">
+                                                                <ul>
+                                                                    <li>Enter your question on a single line.</li>
+                                                                    <li>Answers immediately follow the question, each on a new line.</li>
+                                                                    <li>Place an asterisk (*) in front of the correct answer choice.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-sm">
+                                                                <div class="card bg-light">
+                                                                    <div class="card-body">
+                                                                        <h5>
+                                                                            <small>Multiple Choice Example</small>
+                                                                        </h5>
+                                                                        <p>
+                                                                            Which of the following is a planet?<br>Sun<br>*Earth<br>Proxima Centauri
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="heading_acc_">
+                                                    <h4 class="mb-0 card-title">
+                                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_acc_" aria-expanded="false" aria-controls="collapse_acc_">Multi-Select (M-S)</button>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapse_acc_" class="collapse" aria-labelledby="heading_acc_" data-parent="#accordion1">
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="col-sm">
+                                                                <ul>
+                                                                    <li>Enter your question on a single line.</li>
+                                                                    <li>Answers immediately follow the question, each on a new line.</li>
+                                                                    <li>
+                                                                        Place an asterisk (*) in front of<strong>all</strong>the correct
+                                                    answer choices.
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-sm">
+                                                                <div class="card bg-light">
+                                                                    <div class="card-body">
+                                                                        <h5>
+                                                                            <small>Multi-Select example</small>
+                                                                        </h5>
+                                                                        Which of the following is a planet?                                                                    <br>Sun<br>*Earth<br>*Mars<br>Proxima Centauri
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="heading_acc_">
+                                                    <h4 class="mb-0 card-title">
+                                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_acc_" aria-expanded="false" aria-controls="collapse_acc_">Written Response (WR)</button>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapse_acc_" class="collapse" aria-labelledby="heading_acc_" data-parent="#accordion1">
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="col-sm">
+                                                                <ul>
+                                                                    <li>Enter your question on a single line.</li>
+                                                                    <li>Do not provide an answer.</li>
+                                                                    <li>Leave a blank line between this question and the next question.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-sm">
+                                                                <div class="card bg-light">
+                                                                    <div class="card-body">
+                                                                        <h5>
+                                                                            <small>Written Response example</small>
+                                                                        </h5>
+                                                                        <p>Tell me about yourself.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="heading_acc_">
+                                                    <h4 class="mb-0 card-title">
+                                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_acc_" aria-expanded="false" aria-controls="collapse_acc_">Short Answer (SA)</button>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapse_acc_" class="collapse" aria-labelledby="heading_acc_" data-parent="#accordion1">
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="col-sm">
+                                                                <ul>
+                                                                    <li>Enter your question on a single line.</li>
+                                                                    <li>
+                                                                        Type<strong>SA</strong>directly before your question text, followed
+                                                    by a space.
+                                                                    </li>
+                                                                    <li>Do not provide an answer.</li>
+                                                                    <li>Leave a blank line between this question and the next question.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-sm">
+                                                                <div class="card bg-light">
+                                                                    <div class="card-body">
+                                                                        <h5>
+                                                                            <small>Short Answer example</small>
+                                                                        </h5>
+                                                                        <p>What's your favorite food?</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="heading_acc_">
+                                                    <h4 class="mb-0 card-title">
+                                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_acc_" aria-expanded="false" aria-controls="collapse_acc_">Matching Question (MAT)</button>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapse_acc_" class="collapse" aria-labelledby="heading_acc_" data-parent="#accordion1">
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="col-sm">
+                                                                <ul>
+                                                                    <li>
+                                                                        Type<strong>match</strong>directly before your question text,
+                                                    followed by a space.
+                                                                    </li>
+                                                                    <li>
+                                                                        In each answer line, separate the choice and its correct match with a<strong>slash (/) and one space on each side of the slash</strong>. Do
+                                                    not include more
+                                                    than one slash character in each answer line.
+                                                                    </li>
+                                                                    <li>You can include extra choices that have no corresponding match. Simply
+                                                    place no text to the left of the slash—see the last choice/match entry
+                                                    in the example at the right (“/fore”).</li>
+                                                                    <li>Any identifiers or enumerators included at the beginning of
+                                                    choice/match text lines will be automatically removed, regardless of the
+                                                    selection made in the “Remove enumeration from answers” box.</li>
+                                                                    <li>The answer match entries will be automatically randomized when this
+                                                    question is presented in a D2L quiz.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-sm">
+                                                                <div class="card bg-light">
+                                                                    <div class="card-body">
+                                                                        <h5>
+                                                                            <small>Matching example</small>
+                                                                        </h5>
+                                                                        <p>
+                                                                            Match the number with its spelling.<br>3 / three<br>1 / one<br>12 / twelve<br>/ fore
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="heading_acc_">
+                                                    <h4 class="mb-0 card-title">
+                                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_acc_" aria-expanded="false" aria-controls="collapse_acc_">Ordering Question (ORD)</button>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapse_acc_" class="collapse" aria-labelledby="heading_acc_" data-parent="#accordion1">
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="col-sm">
+                                                                <ul>
+                                                                    <li>
+                                                                        Type<strong>order</strong>directly before your question text,
+                                                    followed by a space.
+                                                                    </li>
+                                                                    <li>
+                                                                        Following the question, list the answers<strong>in the correct
+                                                    order</strong>, each answer on a separate line.
+                                                                    </li>
+                                                                    <li>Each answer line may begin with an identifier/enumerator.</li>
+                                                                    <li>The order of the answer list choices will be randomized when this
+                                                    question is presented in a D2L quiz.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-sm">
+                                                                <div class="card bg-light">
+                                                                    <div class="card-body">
+                                                                        <h5>
+                                                                            <small>Ordering example</small>
+                                                                        </h5>
+                                                                        <p>
+                                                                            Order the following planets according to distance from the
+                                                    sun, shortest to longest.<br>Mercury<br>Earth<br>Mars<br>Jupiter<br>Neptune
+                                                                        </p>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -147,31 +365,91 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card">
-                                            <div class="card-header" id="heading_acc_">
-                                                <h4 class="mb-0 card-title">
-                                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_acc_" aria-expanded="false" aria-controls="collapse_acc_">Multiple Choice (MC)</button>
-                                                </h4>
-                                            </div>
-                                            <div id="collapse_acc_" class="collapse" aria-labelledby="heading_acc_">
-                                                <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col-sm">
-                                                            <ul>
-                                                                <li>Enter your question on a single line.</li>
-                                                                <li>Answers immediately follow the question, each on a new line.</li>
-                                                                <li>Place an asterisk (*) in front of the correct answer choice.</li>
-                                                            </ul>
+                                        <hr>
+                                        <h3>Adding Feedback and Hints to Questions</h3>
+                                        <div class="accoridan" id="accordion1">
+                                            <div class="card">
+                                                <div class="card-header" id="heading_acc_">
+                                                    <h4 class="mb-0 card-title">
+                                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_acc_1a" aria-expanded="false" aria-controls="collapse_acc_1a">Adding Overall Feedback</button>
+                                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_acc_2a" aria-expanded="false" aria-controls="collapse_acc_2a">Adding Feedback to Answer Choices</button>
+                                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_acc_3a" aria-expanded="false" aria-controls="collapse_acc_3a">Adding Hints</button>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapse_acc_1a" class="collapse" aria-labelledby="heading_acc_1a" data-parent="#accordion1">
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="col-sm">
+                                                                <p>In a separate line under the question text, type an “at sign” (@) immediately followed by your feedback text.</p>
+                                                            </div>
+                                                            <div class="col-sm">
+                                                                <div class="card bg-light mb-2">
+                                                                    <div class="card-body">
+                                                                        <h5>Overall Feedback example</h5>
+                                                                        1. Which of the following is a planet?<br>Sun<br>*Earth<br>Proxima Centauri<br>@Earth is the only planet in this list.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div class="col-sm">
-                                                            <div class="card bg-light">
-                                                                <div class="card-body">
-                                                                    <h5>
-                                                                        <small>Multiple Choice Example</small>
-                                                                    </h5>
-                                                                    <p>
-                                                                        1. Which of the following is a planet?<br>Sun<br>*Earth<br>Proxima Centauri
-                                                                    </p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div id="collapse_acc_2a" class="collapse" aria-labelledby="heading_acc_2a" data-parent="#accordion1">
+                                                    <div class="card-body">
+                                                        <h5>Multiple Choice, Multi-Select and Ordering Question Type</h5>
+                                                        <div class="row">
+                                                            <div class="col-sm">
+                                                        
+                                                            <p>In a separate line under the answer text, type @@ (two “at symbols” instead of just one)
+                                                                immediately followed by your feedback text for that particular answer. Note: you do not have
+                                                                to provide feedback for every answer—in the multiple choice question below, notice that
+                                                                answer C has no feedback associated with it. You can also include feedback for both the
+                                                                entire question (@) and for individual answers (@@) within the same question.</p>
+                                                            </div>
+                                                            <div class="col-sm">
+                                                                <div class="card bg-light mb-2">
+                                                                    <div class="card-body">
+                                                                        <h6>Multiple Choice Answer Feedback example</h6>
+                                                                        <p>
+                                                                            At pH 7, arginine side chains would be…<br>*a) virtually all positively charged<br>@@Correct!<br>b) 50% positively charged<br>@@Close—positive charge, but more than 50%.<br>c) 50% negatively charged<br>d) virtually all negatively charged<br>@@Nope, choice A is correct.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <h5>True or False Question Type</h5>
+                                                        <div class="row">
+                                                            <div class="col-sm">
+                                                                <p>For a “true” response choice, on a separate line type T@@ immediately followed by the
+                                                                feedback text. For a “false” response choice, on a separate line type F@@ immediately
+                                                                followed by the feedback text (see example at the right below).</p>
+                                                            </div>
+                                                            <div class="col-sm">
+                                                                <div class="card bg-light mb-2">
+                                                                    <div class="card-body">
+                                                                    <h6>True or False Answer Feedback example</h6>
+                                                                            <p>
+                                                                                Water consists of hydrogen and oxygen.<br>True<br>T@@Correct…hence “H2O<br>F@@Incorrect…remember “H2O”.
+                                                                            </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="collapse_acc_3a" class="collapse" aria-labelledby="heading_acc_3a" data-parent="#accordion1">
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="col-sm">
+                                                                <p>In a separate line under the question text, type a question mark (?) immediately followed by the hint text. Hints can be included only for questions, not for text-only or image-only items.</p>
+                                                            </div>
+                                                            <div class="col-sm">
+                                                                <div class="card bg-light mb-2">
+                                                                    <div class="card-body">
+                                                                        <h5>Hint example</h5>
+                                                                        Which of the following is a planet?                                            <br>Sun<br>*Earth<br>Proxima Centauri<br>?Hint: a celestial body moving in an elliptical orbit around a star.<br>@Earth is the only planet in this list.
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -179,247 +457,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card">
-                                            <div class="card-header" id="heading_acc_">
-                                                <h4 class="mb-0 card-title">
-                                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_acc_" aria-expanded="false" aria-controls="collapse_acc_">Multi-Select (M-S)</button>
-                                                </h4>
-                                            </div>
-                                            <div id="collapse_acc_" class="collapse" aria-labelledby="heading_acc_">
-                                                <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col-sm">
-                                                            <ul>
-                                                                <li>Enter your question on a single line.</li>
-                                                                <li>Answers immediately follow the question, each on a new line.</li>
-                                                                <li>
-                                                                    Place an asterisk (*) in front of<strong>all</strong>the correct
-                                                answer choices.
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-sm">
-                                                            <div class="card bg-light">
-                                                                <div class="card-body">
-                                                                    <h5>
-                                                                        <small>Multi-­Select example</small>
-                                                                    </h5>
-                                                                    2. Which of the following is a planet?                                                                    <br>Sun<br>*Earth<br>*Mars<br>Proxima Centauri
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div class="card-header" id="heading_acc_">
-                                                <h4 class="mb-0 card-title">
-                                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_acc_" aria-expanded="false" aria-controls="collapse_acc_">Written Response (WR)</button>
-                                                </h4>
-                                            </div>
-                                            <div id="collapse_acc_" class="collapse" aria-labelledby="heading_acc_">
-                                                <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col-sm">
-                                                            <ul>
-                                                                <li>Enter your question on a single line.</li>
-                                                                <li>Do not provide an answer.</li>
-                                                                <li>Leave a blank line between this question and the next question.</li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-sm">
-                                                            <div class="card bg-light">
-                                                                <div class="card-body">
-                                                                    <h5>
-                                                                        <small>Written Response example</small>
-                                                                    </h5>
-                                                                    <p>5. Tell me about yourself.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div class="card-header" id="heading_acc_">
-                                                <h4 class="mb-0 card-title">
-                                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_acc_" aria-expanded="false" aria-controls="collapse_acc_">Short Answer (SA)</button>
-                                                </h4>
-                                            </div>
-                                            <div id="collapse_acc_" class="collapse" aria-labelledby="heading_acc_">
-                                                <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col-sm">
-                                                            <ul>
-                                                                <li>Enter your question on a single line.</li>
-                                                                <li>
-                                                                    Type<strong>SA</strong>directly before your question text, followed
-                                                by a space.
-                                                                </li>
-                                                                <li>Do not provide an answer.</li>
-                                                                <li>Leave a blank line between this question and the next question.</li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-sm">
-                                                            <div class="card bg-light">
-                                                                <div class="card-body">
-                                                                    <h5>
-                                                                        <small>Short Answer example</small>
-                                                                    </h5>
-                                                                    <p>SA 6. What's your favorite food?</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div class="card-header" id="heading_acc_">
-                                                <h4 class="mb-0 card-title">
-                                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_acc_" aria-expanded="false" aria-controls="collapse_acc_">Matching Question (MAT)</button>
-                                                </h4>
-                                            </div>
-                                            <div id="collapse_acc_" class="collapse" aria-labelledby="heading_acc_">
-                                                <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col-sm">
-                                                            <ul>
-                                                                <li>
-                                                                    Type<strong>match</strong>directly before your question text,
-                                                followed by a space.
-                                                                </li>
-                                                                <li>
-                                                                    In each answer line, separate the choice and its correct match with a<strong>slash (/) and one space on each side of the slash</strong>. Do
-                                                not include more
-                                                than one slash character in each answer line.
-                                                                </li>
-                                                                <li>You can include extra choices that have no corresponding match. Simply
-                                                place no text to the left of the slash—see the last choice/match entry
-                                                in the example at the right (“/fore”).</li>
-                                                                <li>Any identifiers or enumerators included at the beginning of
-                                                choice/match text lines will be automatically removed, regardless of the
-                                                selection made in the “Remove enumeration from answers” box.</li>
-                                                                <li>The answer match entries will be automatically randomized when this
-                                                question is presented in a D2L quiz.</li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-sm">
-                                                            <div class="card bg-light">
-                                                                <div class="card-body">
-                                                                    <h5>
-                                                                        <small>Matching example</small>
-                                                                    </h5>
-                                                                    <p>
-                                                                        match 1. Match the number with its spelling.<br>3 / three<br>1 / one<br>12 / twelve<br>/ fore
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div class="card-header" id="heading_acc_">
-                                                <h4 class="mb-0 card-title">
-                                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_acc_" aria-expanded="false" aria-controls="collapse_acc_">Ordering Question (ORD)</button>
-                                                </h4>
-                                            </div>
-                                            <div id="collapse_acc_" class="collapse" aria-labelledby="heading_acc_">
-                                                <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col-sm">
-                                                            <ul>
-                                                                <li>
-                                                                    Type<strong>order</strong>directly before your question text,
-                                                followed by a space.
-                                                                </li>
-                                                                <li>
-                                                                    Following the question, list the answers<strong>in the correct
-                                                   order</strong>, each answer on a separate line.
-                                                                </li>
-                                                                <li>Each answer line may begin with an identifier/enumerator.</li>
-                                                                <li>The order of the answer list choices will be randomized when this
-                                                question is presented in a D2L quiz.</li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-sm">
-                                                            <div class="card bg-light">
-                                                                <div class="card-body">
-                                                                    <h5>
-                                                                        <small>Ordering example</small>
-                                                                    </h5>
-                                                                    <p>
-                                                                        order 7. Order the following planets according to distance from the
-                                                   sun, shortest to longest.<br>Mercury<br>Earth<br>Mars<br>Jupiter<br>Neptune
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                         </div>
                                     </div>
-                                    <hr>
-                                    <h3>Adding Feedback and Hints to Questions</h3>
-                                    <h4>Adding Overall Feedback</h4>
-                                    <p>In a separate line under the question text, type an “at sign” (@) immediately followed by
-                           your feedback text.</p>
-                                    <div class="card bg-light mb-2">
-                                        <div class="card-body">
-                                            <h5>Overall Feedback example</h5>
-                                            1. Which of the following is a planet?                                            <br>Sun<br>*Earth<br>Proxima Centauri<br>@Earth is the only planet in this list.
-                                        </div>
-                                    </div>
-                                    <h4>Adding Feedback to Answer Choices</h4>
-                                    <h5>Multiple Choice, Multi-Select and Ordering Question Type</h5>
-                                    <p>In a separate line under the answer text, type @@ (two “at symbols” instead of just one)
-                           immediately followed by your feedback text for that particular answer. Note: you do not have
-                           to provide feedback for every answer—in the multiple choice question below, notice that
-                           answer C has no feedback associated with it. You can also include feedback for both the
-                           entire question (@) and for individual answers (@@) within the same question.</p>
-                                    <div class="card bg-light mb-2">
-                                        <div class="card-body">
-                                            <h6>Multiple Choice Answer Feedback example</h6>
-                                            <p>
-                                                1. At pH 7, arginine side chains would be…<br>*a) virtually all positively charged<br>@@Correct!<br>b) 50% positively charged<br>@@Close—positive charge, but more than 50%.<br>c) 50% negatively charged<br>d) virtually all negatively charged<br>@@Nope, choice A is correct.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <h5>True or False Question Type</h5>
-                                    <p>For a “true” response choice, on a separate line type T@@ immediately followed by the
-                           feedback text. For a “false” response choice, on a separate line type F@@ immediately
-                           followed by the feedback text (see example at the right below).</p>
-                                    <div class="card bg-light mb-2">
-                                        <div class="card-body">
-                                            <h6>True or False Answer Feedback example</h6>
-                                            <p>
-                                                3. Water consists of hydrogen and oxygen.<br>True<br>T@@Correct…hence “H2O<br>F@@Incorrect…remember “H2O”.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <h4>Adding Hints</h4>
-                                    <p>In a separate line under the question text, type a question mark (?) immediately followed by the hint text. Hints can be included only for questions, not for text-­‐only or image-­‐only items.</p>
-                                    <div class="card bg-light mb-2">
-                                        <div class="card-body">
-                                            <h5>Hint example</h5>
-                                            1. Which of the following is a planet?                                            <br>Sun<br>*Earth<br>Proxima Centauri<br>?Hint: a celestial body moving in an elliptical orbit around a star.<br>@Earth is the only planet in this list.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         <!-- Bootstrap JavaScript: jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="./question_converter/_assets/thirdpartylib/jquery/jquery-3.3.1.slim.min.js"></script>
         <script src="./question_converter/_assets/thirdpartylib/popper-js/popper.min.js"></script>
