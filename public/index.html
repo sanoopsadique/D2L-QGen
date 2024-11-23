@@ -480,10 +480,32 @@
         <script src="./question_converter/_assets/js/scripts.min.js"></script>
         <!-- Standalone JavaScript for Question Converter -->
         <script src="./question_converter/_toolkit/quiz_question_converter/js/questionconverter.js"></script>
-        <!-- Custom scripts for display changes -->
-        <script src="./question_converter/_toolkit/quiz_question_converter/js/custom.js"></script>
         <script>
-            
+            $(document).ready(function () {
+                QuestionConverter.init();
+                });
+
+            const link = document.getElementById('sampleQue');
+            const textbox = document.getElementById('textInput');
+
+            // Function to check textbox and toggle link visibility
+            function checkTextbox() {
+            if (textbox.value.trim() === '') {
+                link.style.display = 'inline'; // Show the link
+            } else {
+                link.style.display = 'none';  // Hide the link
+            }
+            }
+
+
+            function loadFile() {
+                fetch('./question_converter/_toolkit/quiz_question_converter/docs/sample_questions.txt')
+                    .then(response => response.text())
+                    .then(data => {
+                        textbox.value = data;
+                    })
+                    .catch(error => console.error('Error loading file:', error));
+            }
             // Initial check on page load
             checkTextbox();
 
