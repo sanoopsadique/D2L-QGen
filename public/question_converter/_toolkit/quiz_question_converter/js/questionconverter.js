@@ -680,7 +680,7 @@ QuestionConverter.showAlert = function (msgType, msgText) {
  */
 QuestionConverter.clearInput = function () {
 	document.getElementById("textInput").value = "";
-	QuestionConverter.showAlert(0, 'Text Cleared');
+	
 }
 
 /**
