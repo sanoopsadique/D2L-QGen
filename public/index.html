@@ -499,9 +499,11 @@
             }
             }
             // Function to listen to click and hide elements 
-            document.addEventListener('click', function() {
-                errorDisp.classList.add('d-none'); 
+            successDisp.addEventListener('click', function() {
                 successDisp.classList.add('d-none');
+            });
+            errorDisp.addEventListener('click', function() {
+                errorDisp.classList.add('d-none'); 
             }); 
             
             function loadFile() {
