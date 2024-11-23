@@ -656,7 +656,10 @@ QuestionConverter.saveAsCSV = function (filename, data) {
 		document.getElementById('sent_success').removeChild(elem);
 	}
 }
-
+//Hide Success Message after 3 seconds
+function hideSuccess() {
+	document.getElementById('sent_success').classList.add('d-none');
+  }
 
 
 /** Show Alert Message
@@ -669,14 +672,12 @@ QuestionConverter.showAlert = function (msgType, msgText) {
 	$('.alert').addClass('d-none');
 	if (msgType == 1) {
 		$('#sent_success').removeClass('d-none');
-		setTimeout(hideAlert, 3000); 
+		setTimeout(hideSuccess, 3000); 
 	} else {
 		$('#sent_error').html(msgText).removeClass('d-none');
 	}
 }
-function hideSuccess() {
-	document.getElementById('sent_success').classList.add('d-none');
-  }
+
 
 /** Clear Input
  * 
