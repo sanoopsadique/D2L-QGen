@@ -54,7 +54,7 @@
                         <button type="button" class="btn btn-clear" id="btnClear">Clear Text</button>
                         <a href="#" onclick="loadFile()" id="sampleQue" style="display: inline;"> Load a Sample Question Set</a>
                         <div class="alert alert-success d-none" role="alert" id="sent_success">
-                            <p>Success! Your questions are converted to CSV file.</p>
+                            Success! Your questions are converted to CSV file.
                         </div>
                         <div class="alert alert-danger d-none" role="alert" id="sent_error">An error occurred.</div>
                         <div class="form-group d-none">
@@ -486,6 +486,8 @@
                 });
 
             const link = document.getElementById('sampleQue');
+            const successDisp = document.getElementById('sent_success');
+            const errorDisp = document.getElementById('sent_error');
             const textbox = document.getElementById('textInput');
 
             // Function to check textbox and toggle link visibility
@@ -496,7 +498,11 @@
                 link.style.display = 'none';  // Hide the link
             }
             }
-            // Function to check textbox and toggle link visibility after clearing the textbox
+            // Function to listen to click and hide elements 
+            link.addEventListener('click', function() {
+                errorDisp.style.display = 'none'; 
+                successDisp.style.display = 'none';
+            }); 
             
             function loadFile() {
                 fetch('./question_converter/_toolkit/quiz_question_converter/docs/sample_questions.txt')
