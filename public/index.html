@@ -52,7 +52,7 @@
                         
                         <button type="button" class="btn btn-secondary" id="btnConvert"><strong>Convert</strong></button>&nbsp;&nbsp;
                         <button type="button" class="btn btn-clear" id="btnClear">Clear Text</button>
-                        <a href="#" onclick="loadFile()">Load Sample Questions</a>
+                        <a href="#" onclick="loadFile()" id="sampleQue" style="display: inline;"> Load a Sample Question Set</a>
                         <div class="alert alert-success d-none" role="alert" id="sent_success">
                             <p>Success! Your questions are converted to CSV file "quiz.csv".</p>
                         </div>
@@ -480,18 +480,16 @@
         <script src="./question_converter/_assets/js/scripts.min.js"></script>
         <!-- Standalone JavaScript for Question Converter -->
         <script src="./question_converter/_toolkit/quiz_question_converter/js/questionconverter.js"></script>
+        <!-- Custom scripts for display changes -->
+        <script src="./question_converter/_toolkit/quiz_question_converter/js/custom.js"></script>
         <script>
-      $(document).ready(function () {
-         QuestionConverter.init();
-      });
-      function loadFile() {
-            fetch('./question_converter/_toolkit/quiz_question_converter/docs/sample_questions.txt')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('textInput').value = data;
-                })
-                .catch(error => console.error('Error loading file:', error));
-        }
-   </script>
+            
+            // Initial check on page load
+            checkTextbox();
+
+            // Check textbox on every input change
+            textbox.addEventListener('input', checkTextbox);
+        </script>
+
     </body>
 </html>
