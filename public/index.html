@@ -500,8 +500,8 @@
             }
             // Function to listen to click and hide elements 
             document.addEventListener('click', function() {
-                errorDisp.style.display = 'none'; 
-                successDisp.style.display = 'none';
+                errorDisp.classList.add('d-none'); 
+                successDisp.classList.add('d-none');
             }); 
             
             function loadFile() {
