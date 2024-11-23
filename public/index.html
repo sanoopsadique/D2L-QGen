@@ -503,6 +503,7 @@
                     .then(response => response.text())
                     .then(data => {
                         textbox.value = data;
+                        checkTextbox();
                     })
                     .catch(error => console.error('Error loading file:', error));
             }
