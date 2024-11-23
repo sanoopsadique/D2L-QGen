@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./question_converter/_assets/thirdpartylib/bootstrap-4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="./question_converter/_assets/thirdpartylib/fontawesome-free-5.9.0-web/css/all.min.css">
+    <!-- Custom CSS for Modern Design -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9fafb;
+            color: #333;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #0056b3;
+        }
+        .container-fluid {
+            padding: 20px;
+        }
+        .btn-primary, .btn-secondary {
+            border-radius: 50px;
+            padding: 10px 20px;
+        }
+        .form-group label {
+            font-weight: 600;
+        }
+        .alert {
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        .modal-header {
+            background-color: #0056b3;
+            color: #fff;
+        }
+        .modal-footer button {
+            border-radius: 50px;
+        }
+        .accordion .card {
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+        }
+        .accordion .card-header {
+            background-color: #e9ecef;
+            border-radius: 10px;
+        }
+        .accordion .btn-link {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .credits-section {
+            background-color: #f1f3f5;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+        }
+        .credits-section p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+    <title>Quiz Question Converter</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="text-center mb-4">
+                    <h1>BrightSpace Quiz Question Converter</h1>
+                    <p>This tool allows you to create a CSV file for import into Brightspace.</p>
+                </div>
+
+                <form>
+                    <div class="form-group">
+                        <label for="textInput" class="lead">Paste the text for your quiz in the box:</label>
+                        <textarea class="form-control" id="textInput" rows="10"></textarea>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <strong>Options</strong>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="defaultPoint">Default point value for each question:</label>
+                                <input type="text" class="form-control" id="defaultPoint" placeholder="1">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="defaultDifficulty">Default difficulty value for each question:</label>
+                                <input type="text" class="form-control" id="defaultDifficulty" placeholder="1">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="removeEnum">
+                                <label class="form-check-label" for="removeEnum">Remove enumeration from answers</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary mx-2" id="btnConvert">Convert</button>
+                        <button type="button" class="btn btn-secondary mx-2" id="btnClear">Clear Text</button>
+                    </div>
+
+                    <div class="alert alert-success d-none" role="alert" id="sent_success">
+                        Success! Your questions are converted to CSV file "quiz.csv".
+                    </div>
+                    <div class="alert alert-danger d-none" role="alert" id="sent_error">
+                        An error occurred, please contact your admin.
+                    </div>
+                </form>
+
+                <!-- Modal for Formatting Instructions -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Question Formatting Instructions</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>This tool was published on the D2L BrightSpace Community.</p>
+                                <!-- Further detailed content as needed -->
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Credits Section -->
+                <div class="credits-section">
+                    <p><strong>Credits:</strong> This project was developed by [Your Name or Organization]. Content and design updates made to improve user experience and accessibility.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and JavaScript dependencies -->
+    <script src="./question_converter/_assets/thirdpartylib/jquery/jquery-3.3.1.slim.min.js"></script>
+    <script src="./question_converter/_assets/thirdpartylib/popper-js/popper.min.js"></script>
+    <script src="./question_converter/_assets/thirdpartylib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -43,12 +43,16 @@
                     <hr>
                     <form>
                         <div class="form-group">
-                            <label for="textInput" class="lead">Paste the text for your quiz in the box <a href="#" data-toggle="modal" data-target="#exampleModal">(Formatting Instructions)</a>.</label><!-- All Questions --><textarea class="form-control" id="textInput" rows="10"></textarea>
+                            <label for="textInput" class="lead">Paste the Formatted Quiz text in the box 
+                                <a href="#" data-toggle="modal" data-target="#exampleModal">(Formatting Instructions)</a>.
+                            </label>
+                            <!-- All Questions -->
+                             <textarea class="form-control" id="textInput" rows="10"></textarea>
                         </div>
                         
                         <button type="button" class="btn btn-secondary" id="btnConvert"><strong>Convert</strong></button>&nbsp;&nbsp;
                         <button type="button" class="btn btn-clear" id="btnClear">Clear Text</button>
-                        <div class="clearfix mt-2"></div>
+                        <a href="#" onclick="loadFile()">Load Sample Questions</a>
                         <div class="alert alert-success d-none" role="alert" id="sent_success">
                             <p>Success! Your questions are converted to CSV file "quiz.csv".</p>
                         </div>
@@ -194,7 +198,7 @@
                                                                     <li>Enter your question on a single line.</li>
                                                                     <li>Answers immediately follow the question, each on a new line.</li>
                                                                     <li>
-                                                                        Place an asterisk (*) in front of<strong>all</strong>the correct
+                                                                        Place an asterisk (*) in front of <strong>all</strong> the correct
                                                     answer choices.
                                                                     </li>
                                                                 </ul>
@@ -256,7 +260,7 @@
                                                                 <ul>
                                                                     <li>Enter your question on a single line.</li>
                                                                     <li>
-                                                                        Type<strong>SA</strong>directly before your question text, followed
+                                                                        Type <strong>SA</strong> directly before your question text, followed
                                                     by a space.
                                                                     </li>
                                                                     <li>Do not provide an answer.</li>
@@ -269,7 +273,7 @@
                                                                         <h5>
                                                                             <small>Short Answer example</small>
                                                                         </h5>
-                                                                        <p>What's your favorite food?</p>
+                                                                        <p>SA What's your favorite food?</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -289,11 +293,11 @@
                                                             <div class="col-sm">
                                                                 <ul>
                                                                     <li>
-                                                                        Type<strong>match</strong>directly before your question text,
+                                                                        Type <strong>match</strong> directly before your question text,
                                                     followed by a space.
                                                                     </li>
                                                                     <li>
-                                                                        In each answer line, separate the choice and its correct match with a<strong>slash (/) and one space on each side of the slash</strong>. Do
+                                                                        In each answer line, separate the choice and its correct match with a <strong>slash (/) and one space on each side of the slash</strong>. Do
                                                     not include more
                                                     than one slash character in each answer line.
                                                                     </li>
@@ -314,7 +318,7 @@
                                                                             <small>Matching example</small>
                                                                         </h5>
                                                                         <p>
-                                                                            Match the number with its spelling.<br>3 / three<br>1 / one<br>12 / twelve<br>/ fore
+                                                                            match Match the number with its spelling.<br>3 / three<br>1 / one<br>12 / twelve<br>/ fore
                                                                         </p>
                                                                     </div>
                                                                 </div>
@@ -335,11 +339,11 @@
                                                             <div class="col-sm">
                                                                 <ul>
                                                                     <li>
-                                                                        Type<strong>order</strong>directly before your question text,
+                                                                        Type <strong>order</strong> directly before your question text,
                                                     followed by a space.
                                                                     </li>
                                                                     <li>
-                                                                        Following the question, list the answers<strong>in the correct
+                                                                        Following the question, list the answers <strong>in the correct
                                                     order</strong>, each answer on a separate line.
                                                                     </li>
                                                                     <li>Each answer line may begin with an identifier/enumerator.</li>
@@ -354,7 +358,7 @@
                                                                             <small>Ordering example</small>
                                                                         </h5>
                                                                         <p>
-                                                                            Order the following planets according to distance from the
+                                                                            order Order the following planets according to distance from the
                                                     sun, shortest to longest.<br>Mercury<br>Earth<br>Mars<br>Jupiter<br>Neptune
                                                                         </p>
                                                                     </div>
@@ -480,6 +484,14 @@
       $(document).ready(function () {
          QuestionConverter.init();
       });
+      function loadFile() {
+            fetch('./question_converter/_toolkit/quiz_question_converter/docs/sample_questions.txt')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('textInput').value = data;
+                })
+                .catch(error => console.error('Error loading file:', error));
+        }
    </script>
     </body>
 </html>
