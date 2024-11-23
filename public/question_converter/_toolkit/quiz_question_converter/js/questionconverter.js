@@ -680,7 +680,8 @@ QuestionConverter.showAlert = function (msgType, msgText) {
  */
 QuestionConverter.clearInput = function () {
 	document.getElementById("textInput").value = "";
-	
+	const link = document.getElementById('sampleQue');
+    link.style.display = 'inline'; // Show the link
 }
 
 /**
